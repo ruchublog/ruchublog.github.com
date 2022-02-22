@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<div id="demo">
+<h1> get balence </h1>
+<button type="button" onclick="loadDoc()">click me</button>
 
 </div>
 <script>
@@ -13,11 +15,11 @@ function loadDoc() {
       this.responseText;
     }
   };
+  //
   xhttp.withCredentials=true;
   xhttp.open("GET","https://paycenter.58.com/bloc/showbankrecord",true)
   xhttp.send();
 }
-  loadDoc();
 </script>
 </body>
 </html>
