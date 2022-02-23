@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div id="demo">
-<h1> get balence </h1>
-<button type="button" onclick="loadDoc()">click me</button>
 
-</div>
+<h1>XMLHttpRequest 对象</h1>
+
+<p>getResponseHeader() 函数返回资源的特定头信息，如长度，服务器类型，内容类型，最后修改等：</p>
+
+<p>最后修改时间：<span id="demo"></span></p>
+
 <script>
-  var p;
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      p=this.getResponseHeader('Cookie');
-      console.log(p)
-      
-    }
-  };
-  //
-  xhttp.withCredentials=true;
-  xhttp.open("GET","https://paycenter.58.com/bloc/showbankrecord",true);
+var xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("demo").innerHTML =
+    this.getResponseHeader("Cookie");
+  }
+};
+xhttp.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
+xhttp.send();
+</script>
+
+</body>
+</html>
+
+  xhttp.open("GET","",true);
   xhttp.send();
 }
 </script>
