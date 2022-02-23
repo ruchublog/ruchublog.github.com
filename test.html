@@ -5,17 +5,23 @@
 
 <div id="demo"></div>
 <script>
-var xhttp=new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
 
 
-xhttp.withCredentials=true;
-xhttp.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
-xhttp.send();
-var a=xhttp.getResponseHeader('Cookie');
-console.log(a)
-console.log(a)
-console.log(a)
+xhr.withCredentials=true;
+
+
+xhr.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
+
+xhr.onreadystatechange = function() {
+   if (this.readyState == 4 && this.status == 200) {
+      // alert the Content-Type of the requested file
+      alert(this.getResponseHeader("Content-Type"));
+   }
+}
+
+xhr.send();
   
   
 </script>
