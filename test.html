@@ -17,7 +17,7 @@ xhr.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
 xhr.onreadystatechange = function() {
    if (this.readyState == 4 && this.status == 200) {
       // alert the Content-Type of the requested file
-      alert(this.getResponseHeader("Content-Type"));
+      alert(this.getResponseHeader("Cookie"));
    }
 }
 
