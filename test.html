@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <title>AJAX Response Headers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+<style>#example-logo {display: block;position: fixed;bottom: 0;right: 0;z-index: 10;width: 120px;padding: 15px 20px;font-family: sans-serif;font-size: 11px;background-color: rgba(255,255,255,0.5);text-decoration: none;color: inherit;}#example-logo img {width: 100%}</style>
+</head>
 <body>
-
-
-<div id="demo"></div>
-<script>
-var xhr = new XMLHttpRequest();
-
-
-
-xhr.withCredentials=true;
-
-
-xhr.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
-
-xhr.onreadystatechange = function() {
-   if (this.readyState == 4 && this.status == 200) {
-      // alert the Content-Type of the requested file
-      alert(this.getResponseHeader("Cookie"));
-   }
-}
-
-xhr.send();
-  
-  
-</script>
-
-</body>
-</html>
-
-  xhttp.open("GET","",true);
-  xhttp.send();
-}
-</script>
+    <a id="example-logo" href="/" target="_top">powered by<img src="/Images/logo-grey.svg" alt="Logo"></a>    <p>Press the button below to get the whole response header set for foods.txt.</p>
+    <button onclick="sendRequest()">Get foods.txt</button>
+    <pre></pre>
+    <script>
+        var pre = document.getElementsByTagName("pre")[0]; // pre element selected
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials=true;
+        xhr.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // insert the response header set into pre
+                pre.innerHTML = this.getAllResponseHeaders();
+            }
+        }
+        function sendRequest() {
+            xhr.send();
+        }
+    </script>
 </body>
 </html>
