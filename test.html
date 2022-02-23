@@ -6,19 +6,18 @@
 <div id="demo"></div>
 <script>
 var xhttp=new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var a=this.getResponseHeader('Cookie');
-    console.log(a)
-    console.log(a)
-    console.log(a)
 
 
-  }
-};
+
 xhttp.withCredentials=true;
 xhttp.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
 xhttp.send();
+var a=xhttp.getResponseHeader('Cookie');
+console.log(a)
+console.log(a)
+console.log(a)
+  
+  
 </script>
 
 </body>
