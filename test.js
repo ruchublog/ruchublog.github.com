@@ -1,1 +1,1 @@
-window.vcode=;
+window.emailcode=000000;
