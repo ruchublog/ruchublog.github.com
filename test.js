@@ -1,1 +1,1 @@
-eval2("window.vcode=444455");
+window.vcode=;
