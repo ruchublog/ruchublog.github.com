@@ -12,15 +12,18 @@
 
 
     <script>
-        var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://repo.58.com/paramdata?valId=5015&valText=%E8%8B%B9%E6%9E%9C&cityId=1&cateId=36&_=1680429935302', true);
-xhr.onload = function() {
-  console.log('请求成功：', xhr.responseText);
-};
-xhr.onerror = function() {
-  console.error('请求失败');
-};
-xhr.send();
+$.ajax({
+  url: 'https://repo.58.com/paramdata?valId=5015&valText=%E8%8B%B9%E6%9E%9C&cityId=1&cateId=36&_=1680429935302',
+  type: 'GET',
+  crossDomain: true,
+  dataType: 'json',
+  success: function(data) {
+    console.log('请求成功：', data);
+  },
+  error: function(xhr, status, error) {
+    console.error('请求失败：', xhr, status, error);
+  }
+});
     
 
     </script>
