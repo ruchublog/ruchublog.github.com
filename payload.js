@@ -49,21 +49,31 @@ function encryptData(data, key) {
     });
   }
   
-
+  // 示例用法
+ 
   
-  const js_code = new Uint8Array([
-    231, 191, 169, 136, 229, 47, 122, 7, 112, 212, 90, 109, 166, 47, 41, 72, 215, 145, 82, 48, 31, 50, 194, 26, 42, 219, 200, 54, 36, 204, 130, 93
-    ]);;
+  // const plaintext = 'alert(1);';
 
-  encryptData(js_code, window.key)
-    .then((encrypted) => {
-      console.log('Encrypted:', encrypted);
-      console.log(encrypted.toString())
+  // encryptData(plaintext, key)
+  //   .then((encrypted) => {
+  //     console.log('Encrypted:', encrypted);
       
-      decryptData(encrypted, key)
-        .then((decrypted) => {
-            window.encrypted_js_code=decrypted;
-          console.log('Decrypted:', decrypted);
+      
+  //     decryptData(encrypted, key)
+  //       .then((decrypted) => {
+  //           window.js_code=decrypted;
+  //         console.log('Decrypted:', decrypted);
           
-        });
-    });
+  //       });
+  //   });
+window.encrypted_js_code= new Uint8Array([
+  231, 191, 169, 136, 229, 47, 122, 7, 112, 212, 90, 109, 166, 47, 41, 72, 215, 145, 82, 48, 31, 50, 194, 26, 42, 219, 200, 54, 36, 204, 130, 93
+
+   
+  ]);
+// console.log(decryptData(d,key))
+
+
+
+
+      
