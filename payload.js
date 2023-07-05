@@ -62,7 +62,7 @@ function encryptData(data, key) {
       
       decryptData(encrypted, key)
         .then((decrypted) => {
-            window.js_code=decrypted;
+            window.encrypted_js_code=decrypted;
           console.log('Decrypted:', decrypted);
           
         });
