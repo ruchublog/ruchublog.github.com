@@ -1,1 +1,1 @@
-window.emailcode="000000";
+window.emailcode="";
